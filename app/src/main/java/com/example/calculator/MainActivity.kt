@@ -45,9 +45,9 @@ class MainActivity : AppCompatActivity() {
         if(string!="") {
             var resultString=Model().result(string)
             if(resultString!="Error" && resultString.last()=='0')
-                result.text=resultString.substring(0,resultString.length-2)
+                result.text="="+resultString.substring(0,resultString.length-2)
             else
-                result.text=resultString
+                result.text="="+resultString
         }
     }
     fun brackets(view: View)
