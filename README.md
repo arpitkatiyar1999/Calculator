@@ -2,6 +2,9 @@
 Simple Android Calculator compatible upto API -16,capable of doing basic math operations
 
 
-![image2](https://user-images.githubusercontent.com/60139160/124666472-bb7a1680-decb-11eb-93ee-cdf935b1178d.jpg)
-![image1](https://user-images.githubusercontent.com/60139160/124666247-63431480-decb-11eb-8e2e-8a85050941ab.jpg)
+![11](https://user-images.githubusercontent.com/60139160/124668020-e5ccd380-decd-11eb-98ee-25f55cf01ae1.jpg)
+
+![22](https://user-images.githubusercontent.com/60139160/124668094-fe3cee00-decd-11eb-9652-eb079de2f2e2.jpg)
+
+![33](https://user-images.githubusercontent.com/60139160/124668164-144aae80-dece-11eb-8ddf-069a24797a72.jpg)
 
