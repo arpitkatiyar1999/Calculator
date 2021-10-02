@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#ffeeeeee</color>
-    <color name="text_color">#ff000000</color>
-    <color name="background_operator">#ffffff</color>
+    <color name="background">#ff000000</color>
+    <color name="text_color">#ffffffff</color>
+    <color name="background_operator">#1a1a1a</color>
     //colors file
 </resources>
