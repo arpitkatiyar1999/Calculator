@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             textView.append(((view as TextView).text).trim())
             return
         }
-        var str=textView.text.last()
+        val str=textView.text.last()
         if(str==')')
         {
             textView.append("*"+(view as TextView).text.trim())
