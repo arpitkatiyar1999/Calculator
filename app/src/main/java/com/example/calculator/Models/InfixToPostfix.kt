@@ -1,4 +1,4 @@
-package com.example.calculator
+package com.example.calculator.Models
 
 import java.util.Stack
 

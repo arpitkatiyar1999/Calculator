@@ -1,9 +1,11 @@
-package com.example.calculator
+package com.example.calculator.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import com.example.calculator.Models.GetResult
+import com.example.calculator.R
 
 class MainActivity : AppCompatActivity() {
     var dotValue:Boolean=false
@@ -12,10 +14,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
+        initAll()
+
+    }
+
+    private fun initAll() {
         textView=findViewById(R.id.textView)
         result=findViewById(R.id.tv_result)
-        supportActionBar?.hide()
-
     }
 
     fun showView(view: View) {
@@ -27,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         var str=textView.text.last()
         if(str==')')
         {
-            textView.append("*"+(view as TextView).text.trim())
+            textView.append("×"+(view as TextView).text.trim())
             return
         }
         textView.append(((view as TextView).text).trim())
@@ -43,7 +49,8 @@ class MainActivity : AppCompatActivity() {
         dotValue=false
         var string=textView.text.toString()
         if(string!="") {
-            var resultString=Model().result(string)
+            string=string.replace("×","*").replace("÷","/")
+            var resultString= GetResult().result(string)
             if(resultString!="Error" && resultString.last()=='0')
                 result.text="="+resultString.substring(0,resultString.length-2)
             else
@@ -60,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         {
             var str=textView.text.last()
             if(str.isDigit())
-                textView.append("*(")
+                textView.append("×(")
             else
                 textView.append("(")
         }
@@ -110,7 +117,7 @@ class MainActivity : AppCompatActivity() {
             textView.append((view).text.trim())
             return
         }
-        if (str=='+' || str=='-' || str=='*' || str=='/')
+        if (str=='+' || str=='-' || str=='×' || str=='÷')
             return
         textView.append((view).text.trim())
     }

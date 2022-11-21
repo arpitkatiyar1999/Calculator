@@ -1,6 +1,5 @@
-package com.example.calculator
-
-class Model {
+package com.example.calculator.Models
+class GetResult {
     private fun replaceN(string: String):String
     {
 
@@ -21,11 +20,11 @@ class Model {
     }
     fun result(string:String):String {
         var stringN = replaceN(string)
-        var postfix=InfixToPostfix().postfixConversion(stringN)
+        var postfix= InfixToPostfix().postfixConversion(stringN)
         if(postfix=="Error")
             return postfix
         return try {
-            var evaluation=ArithmeticEvaluation().evaluation(postfix)
+            var evaluation= ArithmeticEvaluation().evaluation(postfix)
             evaluation.toString()
         }catch (e:Exception) {
             "Error"
